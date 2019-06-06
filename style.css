@@ -1,18 +1,35 @@
 .container {
     display: grid;
-    grid-template-columns:  repeat(5, 1f);
-    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 100px;
+    margin: 20px;
+    grid-gap: 10px;
+}
 
-   }
+.container > div {
+  align-items: center;
+  font-size: 2em;
+  color: red;
+  justify-content: center;
+  align-items: center;
+}
 
 .cell {
-  background-color: black:
+  background-color: #ffeead;
+}
+
+h1 {
+  text-align: center;
 }
 
 @media only screen and (min-width: 900px) {
-  grid-template-columns: repeat(2, 1f);
+  .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media only screen and (min-width: 600px) {
-  grid-template-columns: repeat(1, 1f);
+  .container{
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
